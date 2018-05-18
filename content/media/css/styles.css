@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#marquee {
+    width: 100%;
+    background-color: DARKSLATEBLUE;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+
+main {
+    padding: 4%;
+    width: 96%;
+    margin: 0 auto;
+}

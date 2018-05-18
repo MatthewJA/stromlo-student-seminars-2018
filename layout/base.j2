@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  {% block starthead %}{% endblock starthead %}
+  <meta charset="utf-8">
+  <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+
+  <meta name="viewport" content="{{ resource.meta.viewport }}">
+
+  {% block favicons %}
+  <link rel="shortcut icon" href="{{ media_url('/images/favicon.ico') }}">
+  <link rel="apple-touch-icon" href="{{ media_url('/images/apple-touch-icon.png') }}">
+  {% endblock favicons %}
+
+  {% block css %}
+  <link rel="stylesheet" href="{{ media_url('css/styles.css') }}">
+  {% endblock css %}
+
+  {% block endhead %}{% endblock endhead %}
+</head>
+<body>
+    {% block content %}
+        <header>
+            {% block header -%}
+                <h1>Mount Stromlo Student Seminars 2018</h1>
+            {%- endblock %}
+            {% block marquee %}
+                <p id="marquee" style="display: none">
+                    <s>not</s> featuring fun talks such as:
+                    <strong id="fake-title"></strong></p>
+            {% endblock %}
+        </header>
+        <main>
+            {% block main %}
+            {% endblock main %}
+        </main>
+      </div>
+    {% endblock content %}
+
+    <script src="{{ media_url('scripts/third_party/markov-chain.js')}}"></script>
+    <script>
+        fetch('seminars.json').then(r => r.json()).then(m => {
+            let title = markov.run(m).map(a => a[0]).join('');
+            document.getElementById('fake-title').innerHTML = title;
+            document.getElementById('marquee').style.display = 'block';
+        });
+    </script>
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>
