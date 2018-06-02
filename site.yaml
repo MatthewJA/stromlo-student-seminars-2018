@@ -9,6 +9,11 @@ plugins:
     - hyde.ext.plugins.meta.TaggerPlugin
     - hyde.ext.plugins.text.SyntextPlugin
     - hyde.ext.plugins.text.TextlinksPlugin
+markdown:
+    extensions:
+        - def_list
+        - tables
+        - headerid
 context:
     data:
         menu:
