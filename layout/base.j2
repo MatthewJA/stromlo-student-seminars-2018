@@ -23,6 +23,11 @@
             {% block header -%}
                 <h1>Mount Stromlo Student Seminars 2018</h1>
             {%- endblock %}
+            
+            {% block nav %}
+                {% from "macros.j2" import render_nav with context %}
+                {{ render_nav(menu, 'main_nav') }}
+            {% endblock %}
             {% block marquee %}
                 <p id="marquee" style="display: none">
                     <s>not</s> featuring fun talks such as:
@@ -30,8 +35,10 @@
             {% endblock %}
         </header>
         <main>
-            {% block main %}
-            {% endblock main %}
+            {% filter markdown -%}
+                {% block main %}
+                {% endblock main %}
+            {%- endfilter %}
         </main>
       </div>
     {% endblock content %}

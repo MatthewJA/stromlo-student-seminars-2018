@@ -1,0 +1,8 @@
+---
+extends: base.j2
+default_block: main
+title: Conference Programme
+description: Programme of talks and events at the seminars.
+---
+
+The programme will appear **here**.
