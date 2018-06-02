@@ -1,0 +1,8 @@
+---
+extends: base.j2
+default_block: main
+title: Anti-harassment Policy
+description: Anti-harassment policy at the Stromlo Student Seminars.
+---
+
+The anti-harassment policy will appear **here**.
