@@ -42,6 +42,12 @@ context:
                 css_class: registration
                 type: page
                 url: registration
+            -
+                name: Anti-harassment Policy
+                description: Anti-harassment policy
+                css_class: antiharassment
+                type: page
+                url: antiharassment
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2018-05-18 00:00:00
