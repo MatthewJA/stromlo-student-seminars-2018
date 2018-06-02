@@ -1,0 +1,8 @@
+---
+extends: base.j2
+default_block: main
+title: Registration
+description: Registration for the 2018 Mount Stromlo Student Seminars.
+---
+
+Registration will open soon. When it does, you can register **here**!
