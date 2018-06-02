@@ -1,0 +1,12 @@
+---
+extends: base.j2
+default_block: main
+title: Participants
+description: List of conference participants.
+---
+
+Here we will put a list of conference participants.
+
+| Participant | Institution |
+|-------------|-------------|
+| Tony Twist  | Port Niranda Lighthouse |
