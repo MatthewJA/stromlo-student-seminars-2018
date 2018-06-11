@@ -230,6 +230,6 @@ function getTitle(maxLength) {
     return title;
 }
 
-return getTitle.bind(50);
+return getTitle.bind(null, 50);
 
 }).call(this)
