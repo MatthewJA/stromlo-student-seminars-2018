@@ -24,8 +24,16 @@
             {% block header -%}
                 <a href="{{ content_url('/index.html') }}">
                   <h1>
-                    Mount Stromlo Student Seminars 2018
+                    <div id="stars"></div>
+                    <div id="stars-big"></div>
+                    <img src="{{ media_url('/images/pig.png') }}" alt="Stromlo Student Seminars 2018" class="logo">
                   </h1>
+                  <div id="planets">
+                    <img class="planet" id="jupiter" src="{{ media_url('/images/jupiter.svg') }}">
+                    <img class="planet" id="neptune" src="{{ media_url('/images/neptune.svg') }}">
+                    <img class="planet" id="saturn" src="{{ media_url('/images/saturn.svg') }}">
+                    <img class="planet" id="star" src="{{ media_url('/images/star.svg') }}">
+                  </div>
                 </a>
             {%- endblock %}
             {% block marquee %}
