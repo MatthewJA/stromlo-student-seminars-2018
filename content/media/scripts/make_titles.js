@@ -218,10 +218,18 @@ let titles = [
 let m = markov.create();
 titles.map(a => Array.from({length: a.length}, (x,i) => i).map(b => (a + '***').slice(b, b + 3))).map(a => markov.update(m, a));
 
-function getTitle() {
+function _getTitle() {
     return markov.run(m).map(a => a[0]).join('');
 }
 
-return getTitle;
+function getTitle(maxLength) {
+    let title = _getTitle();
+    while (title.length > maxLength) {
+        title = _getTitle();
+    }
+    return title;
+}
+
+return getTitle.bind(100);
 
 }).call(this)

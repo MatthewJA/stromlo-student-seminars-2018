@@ -21,7 +21,11 @@
     {% block content %}
         <header>
             {% block header -%}
-                <h1>Mount Stromlo Student Seminars 2018</h1>
+                <a href="{{ content_url('/index.html') }}">
+                  <h1>
+                    Mount Stromlo Student Seminars 2018
+                  </h1>
+                </a>
             {%- endblock %}
             {% block marquee %}
                 <p id="marquee" style="display: none">
@@ -40,6 +44,12 @@
             {%- endfilter %}
         </main>
       </div>
+    <footer>
+      {% block footer %}
+        {% from "macros.j2" import render_nav with context %}
+        {{ render_nav(menu, 'footer-nav') }}
+        <img src id="footer-decoration" alt>
+      {% endblock footer %}
     {% endblock content %}
 
     <script src="{{ media_url('scripts/third_party/markov-chain.js') }}"></script>
