@@ -94,7 +94,6 @@ let titles = [
 "The SkyMapper High-Redshift Quasar Survey",
 "Update on the SkyMapper Transient Survey:  type Ia supernovae and other transients",
 "A First SkyMapper Variability Census and the Search for Counterparts to High-energy Events",
-"The Future of Optical Astronomy in Australia – Sponsored by AAO",
 "Opening the dynamic infrared sky with DREAMS",
 "The Huntsman observing systems: the frontier of extremely low surface brightness observations",
 "CACAO: A Cheap And Compact Adaptive Optics system",
