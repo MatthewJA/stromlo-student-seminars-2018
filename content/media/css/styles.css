@@ -1,19 +1,28 @@
+/*
+B23A51
+FF8BA1
+FF728D
+2CB243
+72FF8A
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nunito');
 
 html, body {
     margin: 0;
     padding: 0;
     font-family: Nunito, Arial, sans-serif;
+    background-color: #777;
 }
 
 a:link, a:visited {
     text-decoration: none;
     font-weight: bold;
-    color: #76448A;
+    color: #2CB243;
 }
 
 a:hover {
-    color: #FF32C6;
+    color: #72FF8A;
 }
 
 header h1 {
@@ -32,7 +41,7 @@ h1, h2, h3, h4 {
 
 #marquee {
     width: 100%;
-    background-color: #633974;
+    background-color: #B23A51;
     height: 30px;
     color: white;
     line-height: 30px;
@@ -44,6 +53,7 @@ h1, h2, h3, h4 {
     width: 100%;
     padding: 0;
     margin: 0;
+    background-color: #EEE;
 }
 
 .main-nav ul {
@@ -72,6 +82,7 @@ main {
     width: 96%;
     margin: 0 auto;
     max-width: 790px;
+    background-color: #FEFEFE;
 }
 
 p {
@@ -84,7 +95,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
     min-height: 150px;
-    background-color: #633974;
+    background-color: #B23A51;
     color: white;
 }
 
@@ -98,7 +109,7 @@ footer a:link, footer a:visited {
 }
 
 footer a:hover {
-    color: #FF32C6;
+    color: #FF8BA1;
 }
 
 #footer-decoration {
