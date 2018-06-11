@@ -22,37 +22,37 @@ context:
                 description: Home Page
                 css_class: home
                 type: page
-                url: index
+                url: index.html
             -
                 name: Visiting Canberra
                 description: Transport & accommodation
                 css_class: accom
                 type: page
-                url: accom
+                url: accom.html
             -
                 name: Participants
                 description: List of conference participants
                 css_class: participants
                 type: page
-                url: participants
+                url: participants.html
             -
                 name: Programme
                 description: Programme
                 css_class: programme
                 type: page
-                url: programme
+                url: programme.html
             -
                 name: Registration
                 description: Registration
                 css_class: registration
                 type: page
-                url: registration
+                url: registration.html
             -
                 name: Anti-harassment Policy
                 description: Anti-harassment policy
                 css_class: antiharassment
                 type: page
-                url: antiharassment
+                url: antiharassment.html
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2018-05-18 00:00:00

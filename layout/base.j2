@@ -43,13 +43,12 @@
       </div>
     {% endblock content %}
 
-    <script src="{{ media_url('scripts/third_party/markov-chain.js')}}"></script>
+    <script src="{{ media_url('scripts/third_party/markov-chain.js') }}"></script>
+    <script src="{{ media_url('scripts/make_titles.js') }}"></script>
     <script>
-        fetch('seminars.json').then(r => r.json()).then(m => {
-            let title = markov.run(m).map(a => a[0]).join('');
-            document.getElementById('fake-title').innerHTML = title;
-            document.getElementById('marquee').style.display = 'block';
-        });
+      let title = getTitle();
+      document.getElementById('fake-title').innerHTML = title;
+      document.getElementById('marquee').style.display = 'block';
     </script>
     {% block scripts %}
     {% endblock scripts %}
