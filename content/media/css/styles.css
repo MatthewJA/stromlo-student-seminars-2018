@@ -77,10 +77,11 @@ header h1 {
 }
 
 .logo {
-    height: 290px;  
+    max-height: 290px;  
     margin: 5px 0;
     z-index: 2;
     position: relative;
+    max-width: 100%;
 }
 
 #planets {
@@ -126,7 +127,7 @@ h1, h2, h3, h4 {
 #marquee {
     width: 100%;
     background-color: #B23A51;
-    height: 30px;
+    min-height: 30px;
     color: white;
     line-height: 30px;
     text-align: center;
