@@ -37,3 +37,12 @@
 </nav>
 {%- endif %}
 {%- endmacro %}
+
+{% macro banner() -%}
+    {% if resource.meta.banner -%}
+      <div id="banner">
+        <img src="{{ media_url(resource.meta.banner) }}"
+             alt="{{ resource.meta.title }}">
+      </div>
+    {%- endif %}
+{%- endmacro %}

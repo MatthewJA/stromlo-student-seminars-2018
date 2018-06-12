@@ -48,7 +48,7 @@ header h1 {
   }
 }
 
-#stars {
+.stars {
     background-image: url('/xmas18/media/images/stars.svg');
     position: absolute;
     top: 0;
@@ -62,7 +62,7 @@ header h1 {
     background-position: center;
 }
 
-#stars-big {
+.stars-big {
     background-image: url('/xmas18/media/images/stars_big.svg');
     position: absolute;
     top: 0;
@@ -162,12 +162,32 @@ h1, h2, h3, h4 {
     display: none;
 }
 
+#main-container {
+    overflow: hidden;
+    position: relative;
+    background-color: #1c1335;
+}
+
+#main-container .stars, #main-container .stars-big {
+    height: 300%;
+    background-position-y: 400px;
+}
+
 main {
     padding: 20px 4% 20px 4%;
     width: 96%;
     margin: 0 auto;
     max-width: 790px;
     background-color: #FEFEFE;
+    position: relative;
+}
+
+#banner {
+    text-align: center;
+}
+
+#banner img {
+    max-height: 150px;
 }
 
 p {
@@ -182,6 +202,10 @@ footer {
     min-height: 150px;
     background-color: #B23A51;
     color: white;
+    background-image: url('/xmas18/media/images/sun.jpg');
+    background-size: 150%;
+    background-position-y: center;
+    background-position-x: left;
 }
 
 #footer-content {

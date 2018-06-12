@@ -3,11 +3,17 @@ extends: base.j2
 default_block: main
 title: Mount Stromlo Student Seminars 2018
 description: Mount Stromlo Student Seminars 2018
+banner: images/bip.png
 ---
+
+Have you ever, ever felt like you want to present your work to like-minded students?
 
 The Australian National University Research School of Astronomy and Astrophysics is pleased to present the 2018 Mount Stromlo Student Seminars! This two day conference is designed to be a fun and relaxed event for astronomy and astrophysics research students from all over Australia and the world. The event will give you the chance to network with your peers (and future colleagues), practise your public speaking skills, and learn about a variety of topics.
 
-This year's theme is **coming soon**!
+This year's theme is **children's television**!
+
+{% from "macros.j2" import banner with context %}
+{{ banner() }}
 
 ## Logistics
 
@@ -21,6 +27,6 @@ The time limit for talks is 12 minutes, with 3 minutes for questions and changeo
 
 ## Conference Equity and Anti-Harassment Statement
 
-The Mount Stromlo Student Seminars is dedicated to a harassment-free conference experience for everyone. We do not tolerate harassment of conference participants in any form. Conference participants violating these rules may be sanctioned at the discretion of the conference organizers. [View our anti-harassment policy]([[antiharassment]]).
+The Mount Stromlo Student Seminars is dedicated to a harassment-free conference experience for everyone. We do not tolerate harassment of conference participants in any form. Conference participants violating these rules may be sanctioned at the discretion of the conference organizers. [View our anti-harassment policy]([[antiharassment.html]]).
 
 We look forward to greeting you on the mountain!

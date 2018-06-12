@@ -75,3 +75,5 @@ tagger:
             archive_extension: html
             meta:
                 listable: false
+meta:
+    banner: 

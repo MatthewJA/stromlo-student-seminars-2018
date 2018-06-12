@@ -24,8 +24,8 @@
             {% block header -%}
                 <a href="{{ content_url('/index.html') }}">
                   <h1>
-                    <div id="stars"></div>
-                    <div id="stars-big"></div>
+                    <div class="stars"></div>
+                    <div class="stars-big"></div>
                     <img src="{{ media_url('/images/pig.png') }}" alt="Stromlo Student Seminars 2018" class="logo">
                   </h1>
                   <div id="planets">
@@ -49,12 +49,16 @@
                 {{ render_nav(menu, 'main-nav') }}
             {% endblock %}
         </header>
-        <main>
-            {% filter markdown -%}
-                {% block main %}
-                {% endblock main %}
-            {%- endfilter %}
-        </main>
+        <div id="main-container">
+          <div class="stars"></div>
+          <div class="stars-big"></div>
+          <main>
+              {% filter markdown -%}
+                  {% block main %}
+                  {% endblock main %}
+              {%- endfilter %}
+          </main>
+        </div>
       </div>
     <footer>
       {% block footer %}
