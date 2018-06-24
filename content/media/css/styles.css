@@ -241,3 +241,8 @@ footer a:hover {
 .footer-nav li {
     list-style-type: none;
 }
+
+.participants, .programme {
+    display: none !important;
+}
+
