@@ -257,43 +257,43 @@ footer a:hover {
 .session-header {
     width: 100%;
     height: 10vw;
-    background-image: url('/media/images/peppa.jpg');
+    background-image: url('/xmas18/media/images/peppa.jpg');
     background-size: cover;
     position: relative;
 }
 
 .session-header[data-session="cosmog"] {
-    background-image: url('/media/images/cosmog.jpg');
+    background-image: url('/xmas18/media/images/cosmog.jpg');
     background-position: center;
 }
 
 .session-header[data-session="gumball"] {
-    background-image: url('/media/images/gumball.jpg');
+    background-image: url('/xmas18/media/images/gumball.jpg');
     background-position: center;
 }
 
 .session-header[data-session="bigted"] {
-    background-image: url('/media/images/bigted.jpg');
+    background-image: url('/xmas18/media/images/bigted.jpg');
     background-position: top;
 }
 
 .session-header[data-session="laalaa"] {
-    background-image: url('/media/images/laalaa.jpg');
+    background-image: url('/xmas18/media/images/laalaa.jpg');
     background-position: top;
 }
 
 .session-header[data-session="bigbird"] {
-    background-image: url('/media/images/bigbird.jpg');
+    background-image: url('/xmas18/media/images/bigbird.jpg');
     background-position: center;
 }
 
 .session-header[data-session="cybergirl"] {
-    background-image: url('/media/images/cybergirl.jpg');
+    background-image: url('/xmas18/media/images/cybergirl.jpg');
     background-position: top;
 }
 
 .session-header[data-session="koalabros"] {
-    background-image: url('/media/images/koalabros.jpg');
+    background-image: url('/xmas18/media/images/koalabros.jpg');
     background-position: top;
 }
 
