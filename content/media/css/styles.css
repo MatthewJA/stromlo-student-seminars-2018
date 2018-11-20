@@ -277,6 +277,26 @@ footer a:hover {
     background-position: top;
 }
 
+.session-header[data-session="laalaa"] {
+    background-image: url('/media/images/laalaa.jpg');
+    background-position: top;
+}
+
+.session-header[data-session="bigbird"] {
+    background-image: url('/media/images/bigbird.jpg');
+    background-position: center;
+}
+
+.session-header[data-session="cybergirl"] {
+    background-image: url('/media/images/cybergirl.jpg');
+    background-position: top;
+}
+
+.session-header[data-session="koalabros"] {
+    background-image: url('/media/images/koalabros.jpg');
+    background-position: top;
+}
+
 .session:first-of-type {
     margin-top: 0;
 }
@@ -307,12 +327,20 @@ footer a:hover {
     left: 10px;
     right: auto;
 }
+.session-header[data-session="bigbird"] > time {
+    left: 10px;
+    right: auto;
+}
 
 .session-header[data-session="gumball"] > h2 {
     text-align: left;
 }
 
 .session-header[data-session="bigted"] > h2 {
+    text-align: left;
+}
+
+.session-header[data-session="bigbird"] > h2 {
     text-align: left;
 }
 
