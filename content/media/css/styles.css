@@ -176,9 +176,9 @@ h1, h2, h3, h4 {
 
 main {
     padding: 20px 4% 20px 4%;
-    width: 96%;
-    margin: 0 auto;
     max-width: 790px;
+    width: 92%;
+    margin: 0 auto;
     background-color: #FEFEFE;
     position: relative;
 }
@@ -247,3 +247,132 @@ footer a:hover {
     display: none !important;
 }*/
 
+/* programme stuff */
+
+.session {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.session-header {
+    width: 100%;
+    height: 10vw;
+    background-image: url('/media/images/peppa.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.session-header[data-session="cosmog"] {
+    background-image: url('/media/images/cosmog.jpg');
+    background-position: center;
+}
+
+.session-header[data-session="gumball"] {
+    background-image: url('/media/images/gumball.jpg');
+    background-position: center;
+}
+
+.session-header[data-session="bigted"] {
+    background-image: url('/media/images/bigted.jpg');
+    background-position: top;
+}
+
+.session:first-of-type {
+    margin-top: 0;
+}
+
+.session-header > h2 {
+    text-align: right;
+    color: white;
+    font-size: 5vw;
+    margin: 0;
+    text-shadow: 0px 0px 4px black;
+}
+
+.session-header > time {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 3vw;
+    text-shadow: 0px 0px 4px black;
+}
+
+.session-header[data-session="gumball"] > time {
+    left: 10px;
+    right: auto;
+}
+
+.session-header[data-session="bigted"] > time {
+    left: 10px;
+    right: auto;
+}
+
+.session-header[data-session="gumball"] > h2 {
+    text-align: left;
+}
+
+.session-header[data-session="bigted"] > h2 {
+    text-align: left;
+}
+
+.event > h3 {
+    font-size: 150%;
+    margin: 0;
+}
+
+.event {
+    width: 100%;
+    min-height: 100px;
+    margin: 15px 0;
+}
+
+.presenter {
+    font-size: 125%;
+    font-weight: bold;
+    display: block;
+    float: right;
+    margin-left: 10px;
+}
+
+.institution {
+    font-style: italic;
+    font-size: 125%;
+    float: right;
+    display: block;
+    clear: right;
+    margin-left: 10px;
+}
+
+.presenter, .institution, .event > time {
+    display: block;
+}
+
+.event > h3 {
+    /* default kind is talk */
+    border-bottom: 2px solid darkblue;
+}
+
+.event[data-kind="org"] > h3 {
+    border-bottom: 2px solid #AAA;
+}
+
+.event[data-kind="invited"] > h3 {
+    border-bottom: 2px solid darkred;
+}
+
+@media (max-width: 768px) {
+    .session-header > h2 {
+        font-size: 10vw;
+    }
+
+    .session-header {
+        height: 14vw;
+    }
+
+    .session-header > time {
+        font-size: 4vw;
+        bottom: 0;
+        right: 0;
+    }
+}
