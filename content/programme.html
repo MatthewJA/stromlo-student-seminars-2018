@@ -452,4 +452,111 @@ description: Programme of talks and events at the seminars.
         </div>
 
     </div>
+
+    <button id="now" style="display: none;">Now</button>
 </div>
+
+<style type="text/css">
+    #now {
+        width: 60px; height: 60px;top: 40px; right: 40px;
+        box-shadow:inset 0px 1px 0px 0px #cf866c;
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+        background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+        background-color:#d0451b;
+        border-radius:3px;
+        border:1px solid #942911;
+        cursor:pointer;
+        color: #ffffff;
+        font-family: Nunito, Arial, sans-serif;
+        padding:0;
+        text-decoration:none;
+        font-size: 20px;
+        font-weight: bold;
+        position: fixed;
+    }
+
+    .highlight {
+        background-color: #CECEFF;
+    }
+</style>
+
+<script type="text/javascript">
+    function areSameDate(d1, d2) {
+        // https://stackoverflow.com/questions/8393947/what-is-the-best-way-to-determine-if-a-date-is-today-in-javascript
+        return d1.getFullYear() == d2.getFullYear()
+            && d1.getMonth() == d2.getMonth()
+            && d1.getDate() == d2.getDate();
+    }
+    // Get all the event times.
+    var events = document.getElementsByClassName('event');
+    var times = [];
+    var event, time, hour, minute;
+    for (var i = 0; i < events.length; i++) {
+        event = events[i];
+        time = event.dataset.time.split(':');
+        hour = time[0];
+        minute = time[1];
+        times.push(parseInt(hour) * 60 + parseInt(minute));
+    }
+    // 0 - 24 are Thursday
+    // 25 - 45 are Friday
+    var thursday = new Date('29 Nov 2018 00:00:01 +1100');
+    var friday = new Date('30 Nov 2018 00:00:01 +1100');
+    // Get today's date
+    var todaysDate = new Date();
+
+    var dayOffset = 0;
+    var currentDay;
+    if (areSameDate(thursday, todaysDate)) {
+        currentDay = 'thursday';
+    } else if (areSameDate(friday, todaysDate)) {
+        dayOffset = 25;
+        currentDay = 'friday';
+    }
+
+    if (currentDay) {
+        document.getElementById('now').style.display = 'block';
+    }
+
+    document.getElementById('now').onclick = function() {
+        // Get current time
+        var time = new Date();
+        hour = time.getHours();
+        minute = time.getMinutes();
+        time = hour * 60 + minute;
+
+        var i = dayOffset;
+        var compTime;
+        var target;
+        // If we're before the starting time, just go to the day offset.
+        console.log("It's currently", hour, minute);
+        if (hour < 8 || (hour === 8 && minute < 45)) {
+            console.log("Closest time is", i, events[i]);
+            target = i;
+        } else {
+            while (i < times.length) {
+                compTime = times[i];
+                // Assumes times are ordered.
+                if (time < compTime) {
+                    console.log("Closest time is", target, events[target]);
+                    break
+                }
+                target = i;
+                i++;
+            }
+        }
+
+        // Jump to the ith element.
+        window.scrollTo({
+          top: events[target].offsetTop + events[target].offsetHeight,
+          behavior: 'smooth',
+        });
+
+        // Disable all the highlights.
+        for (var i = events.length - 1; i >= 0; i--) {
+            events[i].classList.remove('highlight');
+        }
+        // Then enable the highlight on the target.
+        events[target].classList.add('highlight');
+    }
+</script>
