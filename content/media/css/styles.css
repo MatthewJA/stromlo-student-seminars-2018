@@ -389,6 +389,10 @@ footer a:hover {
     border-bottom: 2px solid darkred;
 }
 
+#now {
+    z-index: 100;
+}
+
 @media (max-width: 768px) {
     .session-header > h2 {
         font-size: 10vw;
